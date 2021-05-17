@@ -1,0 +1,80 @@
+<div class="container mt-5  ">
+
+  <form [formGroup]="infoform">
+    <div class="row justify-content-center">
+      <!-- STATES -->
+      <mat-form-field appearance="legacy" class="col-4">
+        <mat-label>Select State</mat-label>
+        <mat-select formControlName="stateName" (selectionChange)="getDistricts($event.value)">
+          <mat-option *ngFor="let state of states" [value]="state.state_id">
+            {{state.state_name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- DISTRICTS -->
+      <mat-form-field appearance="legacy" class="col-4">
+        <mat-label>Select District</mat-label>
+        <mat-select formControlName="districtName">
+          <mat-option *ngFor="let district of districts" [value]="district.district_id">
+            {{district.district_name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- SEARCH BUTTON -->
+      <div class="col-2">
+        <!-- (click)="extractDetails()" -->
+        <button mat-raised-button color="primary" (click)="getAvailabityDetails()">Search</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- <mat-divider></mat-divider> -->
+
+<div class="container main">
+  <div class="row justify-content-center" >
+<h3>Filter by</h3>
+    <mat-button-toggle-group class="justify-content-center">
+      <mat-button-toggle value="age18+" (click)="sortByAge(18)" class="col-2"> Age 18+</mat-button-toggle>
+      <mat-button-toggle value="age45+" (click)="sortByAge(45)" class="col-2">Age 45+</mat-button-toggle>
+      <mat-button-toggle value="Slots Available"  class="col-2" (click)="sortBySlotsAvailable()" >Available Slots</mat-button-toggle>
+      <mat-button-toggle value="Paid" class="col-2" (click)="sortByPrice('Paid')">Paid</mat-button-toggle>
+      <mat-button-toggle value="Free"  class="col-2" (click)="sortByPrice('Free')" >Free</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div *ngFor="let data of availabityDetails" class="row mb-4">
+    <div class="row">
+      <div class="col-4">
+        <mat-card >
+          <!-- <img mat-card-image src="./../../assets/images/covishield-sii-twitter-1596351144.jpg" alt="Card image cap" style="width: 10rem;"> -->
+          <mat-card-subtitle><strong>{{data.name | uppercase}}</strong>&nbsp;
+            <span *ngIf="data.fee_type!=('Free')" class="bg-primary px-3  rounded text-white">{{data.fee_type}}</span>
+          </mat-card-subtitle>
+          <mat-card-subtitle > {{data.address}},{{data.state_name}},{{data.pincode}}</mat-card-subtitle>
+
+          <div *ngFor="let fees of data.vaccine_fees">
+            <mat-card-subtitle><strong>₹{{fees.fee}}</strong> - {{fees.vaccine}}</mat-card-subtitle>
+          </div>
+        </mat-card>
+      </div>
+      <div class="col my-auto flex-container " *ngFor="let session of data.sessions" style="text-align: center;">
+        <div class="col">
+          <div>
+            <span *ngIf="session.available_capacity==0"
+              class="bg-danger rounded px-3 text-white">{{session.available_capacity}}</span>
+            <span *ngIf="session.available_capacity>0 && session.available_capacity<=10"
+              class="bg-warning rounded px-3 text-white">{{session.available_capacity}}</span>
+            <span *ngIf="session.available_capacity>10"
+              class="bg-success rounded px-3 text-white">{{session.available_capacity}}</span>
+          </div>
+          <div>{{session.vaccine}}</div>
+          <div style="color: red;">Age {{session.min_age_limit}}+</div>
+          <div>Date:{{session.date}}</div>
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+
+</div>
