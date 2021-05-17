@@ -627,6 +627,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/select */ "d3UM");
 /* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/divider */ "f0Cb");
 /* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/tabs */ "wZkO");
+/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/button-toggle */ "Ynp+");
+
 
 
 
@@ -655,7 +657,8 @@ const materialcomponents = [
     _angular_material_list__WEBPACK_IMPORTED_MODULE_10__["MatListModule"],
     _angular_material_select__WEBPACK_IMPORTED_MODULE_11__["MatSelectModule"],
     _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDividerModule"],
-    _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"]
+    _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"],
+    _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]
 ];
 class MaterialModule {
 }
@@ -672,7 +675,8 @@ MaterialModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
         _angular_material_list__WEBPACK_IMPORTED_MODULE_10__["MatListModule"],
         _angular_material_select__WEBPACK_IMPORTED_MODULE_11__["MatSelectModule"],
         _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDividerModule"],
-        _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"]] });
+        _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"],
+        _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](MaterialModule, { imports: [_angular_material_button__WEBPACK_IMPORTED_MODULE_1__["MatButtonModule"],
         _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
         _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"],
@@ -685,7 +689,8 @@ MaterialModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
         _angular_material_list__WEBPACK_IMPORTED_MODULE_10__["MatListModule"],
         _angular_material_select__WEBPACK_IMPORTED_MODULE_11__["MatSelectModule"],
         _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDividerModule"],
-        _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"]], exports: [_angular_material_button__WEBPACK_IMPORTED_MODULE_1__["MatButtonModule"],
+        _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"],
+        _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]], exports: [_angular_material_button__WEBPACK_IMPORTED_MODULE_1__["MatButtonModule"],
         _angular_material_table__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
         _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_3__["MatToolbarModule"],
         _angular_material_icon__WEBPACK_IMPORTED_MODULE_4__["MatIconModule"],
@@ -697,7 +702,8 @@ MaterialModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
         _angular_material_list__WEBPACK_IMPORTED_MODULE_10__["MatListModule"],
         _angular_material_select__WEBPACK_IMPORTED_MODULE_11__["MatSelectModule"],
         _angular_material_divider__WEBPACK_IMPORTED_MODULE_12__["MatDividerModule"],
-        _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"]] }); })();
+        _angular_material_tabs__WEBPACK_IMPORTED_MODULE_13__["MatTabsModule"],
+        _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_14__["MatButtonToggleModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](MaterialModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -767,9 +773,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/select */ "d3UM");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "ofXK");
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/button */ "bTqV");
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/core */ "FKr1");
-/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
-/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/divider */ "f0Cb");
+/* harmony import */ var _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/button-toggle */ "Ynp+");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/core */ "FKr1");
+/* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/card */ "Wp6s");
+/* harmony import */ var _angular_material_divider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/divider */ "f0Cb");
+
 
 
 
@@ -783,7 +791,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function ChennaidistrictComponent_mat_option_7_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -793,7 +801,7 @@ function ChennaidistrictComponent_mat_option_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", state_r3.state_name, " ");
 } }
 function ChennaidistrictComponent_mat_option_12_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -802,8 +810,8 @@ function ChennaidistrictComponent_mat_option_12_Template(rf, ctx) { if (rf & 1) 
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", district_r4.district_name, " ");
 } }
-function ChennaidistrictComponent_div_17_span_9_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 17);
+function ChennaidistrictComponent_div_31_span_9_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -811,7 +819,7 @@ function ChennaidistrictComponent_div_17_span_9_Template(rf, ctx) { if (rf & 1) 
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](data_r5.fee_type);
 } }
-function ChennaidistrictComponent_div_17_div_12_Template(rf, ctx) { if (rf & 1) {
+function ChennaidistrictComponent_div_31_div_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-card-subtitle");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "strong");
@@ -827,8 +835,8 @@ function ChennaidistrictComponent_div_17_div_12_Template(rf, ctx) { if (rf & 1) 
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" - ", fees_r10.vaccine, "");
 } }
-function ChennaidistrictComponent_div_17_div_13_span_3_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 24);
+function ChennaidistrictComponent_div_31_div_13_span_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -836,8 +844,8 @@ function ChennaidistrictComponent_div_17_div_13_span_3_Template(rf, ctx) { if (r
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](session_r11.available_capacity);
 } }
-function ChennaidistrictComponent_div_17_div_13_span_4_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 25);
+function ChennaidistrictComponent_div_31_div_13_span_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 32);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -845,8 +853,8 @@ function ChennaidistrictComponent_div_17_div_13_span_4_Template(rf, ctx) { if (r
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](session_r11.available_capacity);
 } }
-function ChennaidistrictComponent_div_17_div_13_span_5_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 26);
+function ChennaidistrictComponent_div_31_div_13_span_5_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -854,18 +862,18 @@ function ChennaidistrictComponent_div_17_div_13_span_5_Template(rf, ctx) { if (r
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](session_r11.available_capacity);
 } }
-function ChennaidistrictComponent_div_17_div_13_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 19);
+function ChennaidistrictComponent_div_31_div_13_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, ChennaidistrictComponent_div_17_div_13_span_3_Template, 2, 1, "span", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, ChennaidistrictComponent_div_17_div_13_span_4_Template, 2, 1, "span", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, ChennaidistrictComponent_div_17_div_13_span_5_Template, 2, 1, "span", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, ChennaidistrictComponent_div_31_div_13_span_3_Template, 2, 1, "span", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, ChennaidistrictComponent_div_31_div_13_span_4_Template, 2, 1, "span", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, ChennaidistrictComponent_div_31_div_13_span_5_Template, 2, 1, "span", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div");
@@ -888,10 +896,10 @@ function ChennaidistrictComponent_div_17_div_13_Template(rf, ctx) { if (rf & 1) 
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Date:", session_r11.date, "");
 } }
-function ChennaidistrictComponent_div_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 12);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 13);
+function ChennaidistrictComponent_div_31_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 20);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "mat-card");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "mat-card-subtitle");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "strong");
@@ -899,15 +907,15 @@ function ChennaidistrictComponent_div_17_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](7, "uppercase");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "\u00A0 ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, ChennaidistrictComponent_div_17_span_9_Template, 2, 1, "span", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, ChennaidistrictComponent_div_31_span_9_Template, 2, 1, "span", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-card-subtitle");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, ChennaidistrictComponent_div_17_div_12_Template, 5, 2, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, ChennaidistrictComponent_div_31_div_12_Template, 5, 2, "div", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, ChennaidistrictComponent_div_17_div_13_Template, 12, 6, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, ChennaidistrictComponent_div_31_div_13_Template, 12, 6, "div", 23);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "mat-divider");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -931,20 +939,24 @@ class ChennaidistrictComponent {
         this.states = [];
         this.districts = [];
         this.centers = [];
-        //-------- formgroup Modal---------///
+        this.availabityDetails = [];
+        //  -------- formgroup Modal---------///
         this.infoform = this.fgroup.group({
             stateName: [''],
             districtName: [''],
         });
     }
     ngOnInit() {
-        //----------------To get the stateid and statename from state API-------------------//     
+        setTimeout(function () {
+            location.reload();
+        }, 60000);
+        //  ----------------To get the stateid and statename from state API-------------------//     
         this.details.getstateData().subscribe(stateData => {
             this.states = stateData['states'];
             console.log(this.states);
             console.log(stateData);
         }, err => console.error(err));
-        //-----------------To get the distid and distname from district API-------------------//
+        //  -----------------To get the distid and distname from district API-------------------//
     }
     getDistricts(val) {
         this.details.getdistrictData(val).subscribe(districtdata => {
@@ -958,12 +970,24 @@ class ChennaidistrictComponent {
         const currDate = today.format('DD-MM-YYYY');
         this.details.getsessionData(districtId, currDate).subscribe(sessiondata => {
             this.centers = sessiondata['centers'];
+            this.availabityDetails = this.centers;
             console.log(this.centers);
         }, err => console.error(err));
     }
+    sortByAge(val) {
+        this.availabityDetails = this.centers.filter(sessionData => sessionData.sessions.every(age => age.min_age_limit === (val)));
+        console.log(this.availabityDetails);
+    }
+    sortBySlotsAvailable() {
+        this.availabityDetails = this.centers.filter(item => item.sessions.every(slots => slots.available_capacity != 0));
+    }
+    sortByPrice(val) {
+        this.availabityDetails = this.centers.filter(item => item.fee_type === (val));
+        console.log(this.availabityDetails);
+    }
 }
 ChennaidistrictComponent.ɵfac = function ChennaidistrictComponent_Factory(t) { return new (t || ChennaidistrictComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_districtdetails_service__WEBPACK_IMPORTED_MODULE_2__["DistrictdetailsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormBuilder"])); };
-ChennaidistrictComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ChennaidistrictComponent, selectors: [["app-chennaidistrict"]], decls: 18, vars: 4, consts: [[1, "container", "mt-5"], [3, "formGroup"], [1, "row"], ["appearance", "legacy", 1, "col-4"], ["formControlName", "stateName", 3, "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "districtName"], [1, "col-2"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "container", "main"], ["class", "row mb-4", 4, "ngFor", "ngForOf"], [3, "value"], [1, "row", "mb-4"], [1, "col-3"], ["class", "bg-primary px-3  rounded text-white", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["class", "col my-auto flex-container ", "style", "text-align: center;", 4, "ngFor", "ngForOf"], [1, "bg-primary", "px-3", "rounded", "text-white"], [1, "col", "my-auto", "flex-container", 2, "text-align", "center"], [1, "col"], ["class", "bg-danger rounded px-3 text-white", 4, "ngIf"], ["class", "bg-warning rounded px-3 text-white", 4, "ngIf"], ["class", "bg-success rounded px-3 text-white", 4, "ngIf"], [2, "color", "red"], [1, "bg-danger", "rounded", "px-3", "text-white"], [1, "bg-warning", "rounded", "px-3", "text-white"], [1, "bg-success", "rounded", "px-3", "text-white"]], template: function ChennaidistrictComponent_Template(rf, ctx) { if (rf & 1) {
+ChennaidistrictComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ChennaidistrictComponent, selectors: [["app-chennaidistrict"]], decls: 32, vars: 4, consts: [[1, "container", "mt-5"], [3, "formGroup"], [1, "row", "justify-content-center"], ["appearance", "legacy", 1, "col-4"], ["formControlName", "stateName", 3, "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], ["formControlName", "districtName"], [1, "col-2"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "container", "main"], [1, "justify-content-center"], ["value", "age18+", 1, "col-2", 3, "click"], ["value", "age45+", 1, "col-2", 3, "click"], ["value", "Slots Available", 1, "col-2", 3, "click"], ["value", "Paid", 1, "col-2", 3, "click"], ["value", "Free", 1, "col-2", 3, "click"], ["class", "row mb-4", 4, "ngFor", "ngForOf"], [3, "value"], [1, "row", "mb-4"], [1, "row"], [1, "col-4"], ["class", "bg-primary px-3  rounded text-white", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["class", "col my-auto flex-container ", "style", "text-align: center;", 4, "ngFor", "ngForOf"], [1, "bg-primary", "px-3", "rounded", "text-white"], [1, "col", "my-auto", "flex-container", 2, "text-align", "center"], [1, "col"], ["class", "bg-danger rounded px-3 text-white", 4, "ngIf"], ["class", "bg-warning rounded px-3 text-white", 4, "ngIf"], ["class", "bg-success rounded px-3 text-white", 4, "ngIf"], [2, "color", "red"], [1, "bg-danger", "rounded", "px-3", "text-white"], [1, "bg-warning", "rounded", "px-3", "text-white"], [1, "bg-success", "rounded", "px-3", "text-white"]], template: function ChennaidistrictComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "form", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -994,7 +1018,34 @@ ChennaidistrictComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, ChennaidistrictComponent_div_17_Template, 15, 9, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Filter by");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-button-toggle-group", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "mat-button-toggle", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChennaidistrictComponent_Template_mat_button_toggle_click_21_listener() { return ctx.sortByAge(18); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Age 18+");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "mat-button-toggle", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChennaidistrictComponent_Template_mat_button_toggle_click_23_listener() { return ctx.sortByAge(45); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Age 45+");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "mat-button-toggle", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChennaidistrictComponent_Template_mat_button_toggle_click_25_listener() { return ctx.sortBySlotsAvailable(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Available Slots");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "mat-button-toggle", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChennaidistrictComponent_Template_mat_button_toggle_click_27_listener() { return ctx.sortByPrice("Paid"); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Paid");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "mat-button-toggle", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ChennaidistrictComponent_Template_mat_button_toggle_click_29_listener() { return ctx.sortByPrice("Free"); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Free");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, ChennaidistrictComponent_div_31_Template, 15, 9, "div", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
@@ -1003,9 +1054,9 @@ ChennaidistrictComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵ�
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.states);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.districts);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.centers);
-    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_5__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_material_core__WEBPACK_IMPORTED_MODULE_8__["MatOption"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_9__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_10__["MatDivider"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["UpperCasePipe"]], styles: [".main[_ngcontent-%COMP%]{\r\n    overflow-y:auto;\r\n     width:auto;\r\n height: 75%;\r\n}\r\n.bg-danger[_ngcontent-%COMP%]{\r\n    background-color: red !important;\r\n}\r\n.bg-success[_ngcontent-%COMP%]{\r\n    background-color: green !important;\r\n}\r\n.flex-container[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n   \r\n  }\r\n.flex-container[_ngcontent-%COMP%]    > div[_ngcontent-%COMP%] {\r\n    \r\n    width: 100px;\r\n    margin: 10px;\r\n    text-align: center;\r\n    \r\n  }\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2hlbm5haWRpc3RyaWN0L2NoZW5uYWlkaXN0cmljdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtLQUNkLFVBQVU7Q0FDZCxXQUFXO0FBQ1o7QUFDQTtJQUNJLGdDQUFnQztBQUNwQztBQUNBO0lBQ0ksa0NBQWtDO0FBQ3RDO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsZUFBZTs7RUFFakI7QUFDQTs7SUFFRSxZQUFZO0lBQ1osWUFBWTtJQUNaLGtCQUFrQjs7RUFFcEIiLCJmaWxlIjoic3JjL2FwcC9jaGVubmFpZGlzdHJpY3QvY2hlbm5haWRpc3RyaWN0LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubWFpbntcclxuICAgIG92ZXJmbG93LXk6YXV0bztcclxuICAgICB3aWR0aDphdXRvO1xyXG4gaGVpZ2h0OiA3NSU7XHJcbn1cclxuLmJnLWRhbmdlcntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHJlZCAhaW1wb3J0YW50O1xyXG59XHJcbi5iZy1zdWNjZXNze1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW4gIWltcG9ydGFudDtcclxufVxyXG4uZmxleC1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtd3JhcDogd3JhcDtcclxuICAgXHJcbiAgfVxyXG4gIC5mbGV4LWNvbnRhaW5lciA+IGRpdiB7XHJcbiAgICBcclxuICAgIHdpZHRoOiAxMDBweDtcclxuICAgIG1hcmdpbjogMTBweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIFxyXG4gIH1cclxuIl19 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.availabityDetails);
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_4__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_5__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_8__["MatButtonToggleGroup"], _angular_material_button_toggle__WEBPACK_IMPORTED_MODULE_8__["MatButtonToggle"], _angular_material_core__WEBPACK_IMPORTED_MODULE_9__["MatOption"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCard"], _angular_material_card__WEBPACK_IMPORTED_MODULE_10__["MatCardSubtitle"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_11__["MatDivider"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["UpperCasePipe"]], styles: [".main[_ngcontent-%COMP%]{\r\n    overflow-y:auto;\r\n     width:auto;\r\n height: 75%;\r\n}\r\n.bg-danger[_ngcontent-%COMP%]{\r\n    background-color: red !important;\r\n}\r\n.bg-success[_ngcontent-%COMP%]{\r\n    background-color: green !important;\r\n}\r\n.flex-container[_ngcontent-%COMP%] {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n   \r\n  }\r\n.flex-container[_ngcontent-%COMP%]    > div[_ngcontent-%COMP%] {\r\n    \r\n    width: 100px;\r\n    margin: 10px;\r\n    text-align: center;\r\n    \r\n  }\r\n.mat-button-toggle-group[_ngcontent-%COMP%]{\r\n    background-color: #3F51B5;\r\n}\r\n.mat-button-toggle-checked[_ngcontent-%COMP%] \r\n{\r\n    background-color: #FF4081;\r\n    color: white;\r\n    font-weight:bold;\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2hlbm5haWRpc3RyaWN0L2NoZW5uYWlkaXN0cmljdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksZUFBZTtLQUNkLFVBQVU7Q0FDZCxXQUFXO0FBQ1o7QUFDQTtJQUNJLGdDQUFnQztBQUNwQztBQUNBO0lBQ0ksa0NBQWtDO0FBQ3RDO0FBQ0E7SUFDSSxhQUFhO0lBQ2IsZUFBZTs7RUFFakI7QUFDQTs7SUFFRSxZQUFZO0lBQ1osWUFBWTtJQUNaLGtCQUFrQjs7RUFFcEI7QUFDRjtJQUNJLHlCQUF5QjtBQUM3QjtBQUNBOztJQUVJLHlCQUF5QjtJQUN6QixZQUFZO0lBQ1osZ0JBQWdCO0FBQ3BCIiwiZmlsZSI6InNyYy9hcHAvY2hlbm5haWRpc3RyaWN0L2NoZW5uYWlkaXN0cmljdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW57XHJcbiAgICBvdmVyZmxvdy15OmF1dG87XHJcbiAgICAgd2lkdGg6YXV0bztcclxuIGhlaWdodDogNzUlO1xyXG59XHJcbi5iZy1kYW5nZXJ7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQgIWltcG9ydGFudDtcclxufVxyXG4uYmctc3VjY2Vzc3tcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGdyZWVuICFpbXBvcnRhbnQ7XHJcbn1cclxuLmZsZXgtY29udGFpbmVyIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LXdyYXA6IHdyYXA7XHJcbiAgIFxyXG4gIH1cclxuICAuZmxleC1jb250YWluZXIgPiBkaXYge1xyXG4gICAgXHJcbiAgICB3aWR0aDogMTAwcHg7XHJcbiAgICBtYXJnaW46IDEwcHg7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBcclxuICB9XHJcbi5tYXQtYnV0dG9uLXRvZ2dsZS1ncm91cHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzRjUxQjU7XHJcbn1cclxuLm1hdC1idXR0b24tdG9nZ2xlLWNoZWNrZWQgXHJcbntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRjQwODE7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBmb250LXdlaWdodDpib2xkO1xyXG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ChennaidistrictComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
