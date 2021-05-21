@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import * as moment from 'moment';
 import { DistrictdetailsService } from '../districtdetails.service';
-import { district, session, stateDetails, state } from '../session';
+import { district, center, state } from '../session';
 
 @Component({
   selector: 'app-chennaidistrict',
@@ -12,10 +12,11 @@ import { district, session, stateDetails, state } from '../session';
 
 
 export class ChennaidistrictComponent implements OnInit {
-  public states: any = [];
-  public districts: any = [];
-  public centers: any = [];
-  public availabityDetails: any=[];
+  public states:state[] = [];
+  public districts:district[]= [];
+  public centers:center[]= [];
+  public availabityDetails:center[]=[];
+  public aD:center[]=[];
   constructor(private details: DistrictdetailsService,
               private fgroup: FormBuilder) { }
 
@@ -26,16 +27,15 @@ export class ChennaidistrictComponent implements OnInit {
   });
   ngOnInit(): void {
 
-    setTimeout(
-      function(){ 
-      location.reload(); 
-      },60000);
+    // setTimeout(
+    //   function(){ 
+    //   location.reload(); 
+    //   },60000);
 
     //  ----------------To get the stateid and statename from state API-------------------//     
     this.details.getstateData().subscribe(stateData => {
-      this.states = stateData['states'];
+      this.states = stateData.states as state[];
       console.log(this.states);
-      console.log(stateData);
     }, err => console.error(err));
 
 
@@ -46,27 +46,31 @@ export class ChennaidistrictComponent implements OnInit {
   }
     getDistricts(val) {
     this.details.getdistrictData(val).subscribe(districtdata => {
-      this.districts = districtdata['districts'];
+      this.districts = districtdata.districts as district[];
       console.log(this.districts);
     }, err => console.error(err));
 
   }
 
   getAvailabityDetails() {
+    
     const districtId = this.infoform.get('districtName').value;
     const today = moment();
     const currDate = today.format('DD-MM-YYYY');
     this.details.getsessionData(districtId, currDate).subscribe(sessiondata => {
-      this.centers = sessiondata['centers'];
+      this.centers = sessiondata.centers as center[];
       this.availabityDetails=this.centers;
       console.log(this.centers);
     }
     , err => console.error(err));
+    document.getElementById('filter').style.display='contents';
+    document.getElementById('mainContainer').style.backgroundColor='#f5f5f5';
   }
 
      sortByAge(val)
      {
-     this.availabityDetails=this.centers.filter(sessionData=>sessionData.sessions.every(age=>age.min_age_limit===(val)));  
+       
+      this.availabityDetails=this.centers.filter(sessionData=>sessionData.sessions.some(age=>age.min_age_limit===(val)));  
        console.log(this.availabityDetails);
      }
      sortBySlotsAvailable()

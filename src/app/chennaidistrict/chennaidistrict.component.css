@@ -1,5 +1,8 @@
+
+
 .main{
     overflow-y:auto;
+    
      width:auto;
  height: 75%;
 }
@@ -9,7 +12,7 @@
 .bg-success{
     background-color: green !important;
 }
-.flex-container {
+/* .flex-container {
     display: flex;
     flex-wrap: wrap;
    
@@ -20,13 +23,30 @@
     margin: 10px;
     text-align: center;
     
+  } */
+  @media screen and (max-width: 576px) {
+    .sessionData {
+        font-size:xx-small;
+    }
+    .addressData{
+        font-size: xx-small;
+    }
+    .filter{
+        font-size: xx-small;
+    }
   }
-.mat-button-toggle-group{
-    background-color: #3F51B5;
-}
-.mat-button-toggle-checked 
-{
-    background-color: #FF4081;
-    color: white;
-    font-weight:bold;
-}
+  @media screen and (max-width: 768px) {
+      .filter{
+          font-size: x-small;
+      }
+      .sessionData {
+        font-size:x-small;
+    }
+    .addressData{
+        font-size: x-small;
+    }
+  }
+
+
+
+
