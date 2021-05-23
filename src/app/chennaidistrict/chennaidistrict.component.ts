@@ -12,13 +12,13 @@ import { district, center, state } from '../session';
 
 
 export class ChennaidistrictComponent implements OnInit {
-  public states:state[] = [];
-  public districts:district[]= [];
-  public centers:center[]= [];
-  public availabityDetails:center[]=[];
-  public aD:center[]=[];
+  public states: state[] = [];
+  public districts: district[] = [];
+  public centers: center[] = [];
+  public availabityDetails: center[] = [];
+  public aD: center[] = [];
   constructor(private details: DistrictdetailsService,
-              private fgroup: FormBuilder) { }
+    private fgroup: FormBuilder) { }
 
   //  -------- formgroup Modal---------///
   infoform = this.fgroup.group({
@@ -44,7 +44,7 @@ export class ChennaidistrictComponent implements OnInit {
 
 
   }
-    getDistricts(val) {
+  getDistricts(val) {
     this.details.getdistrictData(val).subscribe(districtdata => {
       this.districts = districtdata.districts as district[];
       console.log(this.districts);
@@ -53,33 +53,39 @@ export class ChennaidistrictComponent implements OnInit {
   }
 
   getAvailabityDetails() {
-    
+
     const districtId = this.infoform.get('districtName').value;
     const today = moment();
     const currDate = today.format('DD-MM-YYYY');
     this.details.getsessionData(districtId, currDate).subscribe(sessiondata => {
       this.centers = sessiondata.centers as center[];
-      this.availabityDetails=this.centers;
+      this.availabityDetails = this.centers;
       console.log(this.centers);
     }
-    , err => console.error(err));
-    document.getElementById('filter').style.display='contents';
-    document.getElementById('mainContainer').style.backgroundColor='#f5f5f5';
+      , err => console.error(err));
+    document.getElementById('filter').style.display = 'contents';
+    document.getElementById('mainContainer').style.backgroundColor = '#f5f5f5';
   }
 
-     sortByAge(val)
-     {
-       
-      this.availabityDetails=this.centers.filter(sessionData=>sessionData.sessions.some(age=>age.min_age_limit===(val)));  
-       console.log(this.availabityDetails);
-     }
-     sortBySlotsAvailable()
-     {
-       this.availabityDetails=this.centers.filter(item=>item.sessions.every(slots=>slots.available_capacity!=0));
-     }
-     sortByPrice(val)
-     {
-       this.availabityDetails=this.centers.filter(item=>item.fee_type===(val));
-       console.log(this.availabityDetails);
-     }
+  sortByAge(val) {
+    this.availabityDetails = this.centers.map(({ sessions, ...r }) => ({
+      ...r,
+      sessions: sessions.filter(e => e.min_age_limit === (val))
+    }))
+      .filter(e => e.sessions.length);
+    console.log(this.availabityDetails);
+  }
+  sortBySlotsAvailable() {
+    // this.availabityDetails=this.centers.filter(item=>item.sessions.every(slots=>slots.available_capacity!=0));
+    this.availabityDetails = this.centers.map(({ sessions, ...r }) => ({
+      ...r,
+      sessions: sessions.filter(e => e.available_capacity)
+    }))
+      .filter(e => e.sessions.length);
+    console.log(this.availabityDetails);
+  }
+  sortByPrice(val) {
+    this.availabityDetails = this.centers.filter(item => item.fee_type === (val));
+    console.log(this.availabityDetails);
+  }
 }
