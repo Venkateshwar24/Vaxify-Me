@@ -36,24 +36,27 @@
 <!-- <mat-divider></mat-divider> -->
 
 <div class="container main" id="mainContainer">
-  <div class="row justify-content-center  " id="filter" style="display: none;">
+  <div class="row justify-content-center" id="filter" style="display: none;">
     <h4 class=" m-0 ">Filter by</h4>
     
       
-      <button  mat-raised-button  value="age18+" (click)="sortByAge(18)" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter"> Age 18+</button>
-      <button mat-raised-button  value="age45+" (click)="sortByAge(45)" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter">Age 45+</button>
-      <button mat-raised-button  value="Slots Available" class="col-sm-2 col-lg-2 col-xl-2 col-3 filter" (click)="sortBySlotsAvailable()">Available Slots
+      <button  mat-raised-button  value="age18+" (click)="sortByAge(18)" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter mb-2 mx-2 px-2"> Age 18+</button>
+      <button mat-raised-button  value="age45+" (click)="sortByAge(45)" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter mb-2 mx-2 px-2">Age 45+</button>
+      <button mat-raised-button  value="Slots Available" class="col-sm-2 col-lg-2 col-xl-2 col-3 filter mb-2 mx-2 px-2" (click)="sortBySlotsAvailable()">Available Slots
       </button>
-      <button mat-raised-button  value="Paid" class="col-sm-2 col-lg-2 col-xl-2 col-2  filter" (click)="sortByPrice('Paid')">Paid</button>
-      <button mat-raised-button  value="Free" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter" (click)="sortByPrice('Free')">Free</button>
+      <button mat-raised-button  value="Covaxin" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter mb-2 mx-2 px-2" (click)="sortByVaccine('COVAXIN')">Covaxin</button>
+      <button mat-raised-button  value="CoviShield" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter mb-2 mx-2 px-2" (click)="sortByVaccine('COVISHIELD')">CoviShield</button>
+      <button mat-raised-button  value="Sputnik V" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter mb-2 mx-2 px-2" (click)="sortByVaccine('SPUTNIK V')">Sputnik V</button>
+      <button mat-raised-button  value="Paid" class="col-sm-2 col-lg-2 col-xl-2 col-2  filter mb-2 mx-2 px-2" (click)="sortByPrice('Paid')">Paid</button>
+      <button mat-raised-button  value="Free" class="col-sm-2 col-lg-2 col-xl-2 col-2 filter mb-2 mx-2 px-2" (click)="sortByPrice('Free')">Free</button>
     
   </div>
 
   <div *ngFor="let data of availabityDetails">
     <div class="row my-5">
-      <div class="col- col-sm-4 col-lg-4 col-xl-4">
+      <div class="col- col-sm-4 col-lg-4 col-xl-4 ">
         
-          <mat-card>
+          <mat-card >
             <!-- <img mat-card-image src="./../../assets/images/covishield-sii-twitter-1596351144.jpg" alt="Card image cap" style="width: 10rem;"> -->
             <mat-card-subtitle><strong>{{data.name | uppercase}}</strong>&nbsp;
               <span *ngIf="data.fee_type!=('Free')" class="bg-primary px-3  rounded text-white">{{data.fee_type}}</span>
@@ -66,14 +69,14 @@
             </div>
           </mat-card>
       </div>
-      <div class="col-4 col-sm-8 col-lg-8 col-xl-8 ">
-        <div class="row ">
-            <div class="col- col-sm-4 col-lg-2 col-xl-2  mt-4 sessionData" *ngFor="let session of data.sessions" style="text-align: center; font-size:9pt;">
-              <div *ngIf="session.available_capacity==0" class="bg-danger rounded px-2 text-white ">
+      <div class="col-12 col-sm-8 col-lg-8 col-xl-8 ">
+        <div class="row sessionDetails ">
+            <div class="col-4 col-sm-4 col-lg-2 col-xl-2  mt-4 sessionData" *ngFor="let session of data.sessions" style="text-align: center; font-size:9pt;">
+              <div *ngIf="session.available_capacity==0" class="bg-danger rounded px-0 text-white ">
                 {{session.available_capacity}}</div>
               <div *ngIf="session.available_capacity>0 && session.available_capacity<=10"
-                class="bg-warning rounded px-2 text-white ">{{session.available_capacity}}</div>
-              <div *ngIf="session.available_capacity>10" class="bg-success rounded px-2 text-white ">
+                class="bg-warning rounded px-0 text-white ">{{session.available_capacity}}</div>
+              <div *ngIf="session.available_capacity>10" class="bg-success rounded px-0 text-white ">
                 {{session.available_capacity}}</div>
 
               <div >{{session.vaccine}}</div>

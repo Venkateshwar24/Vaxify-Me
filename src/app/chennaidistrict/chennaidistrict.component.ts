@@ -64,7 +64,7 @@ export class ChennaidistrictComponent implements OnInit {
     }
       , err => console.error(err));
     document.getElementById('filter').style.display = 'contents';
-    document.getElementById('mainContainer').style.backgroundColor = '#f5f5f5';
+    document.getElementById('mainContainer').style.backgroundColor = '#FBFBFB';
   }
 
   sortByAge(val) {
@@ -86,6 +86,16 @@ export class ChennaidistrictComponent implements OnInit {
   }
   sortByPrice(val) {
     this.availabityDetails = this.centers.filter(item => item.fee_type === (val));
+    console.log(this.availabityDetails);
+  }
+
+  sortByVaccine(val)
+  {
+    this.availabityDetails = this.centers.map(({ sessions, ...r }) => ({
+      ...r,
+      sessions: sessions.filter(e => e.vaccine === (val))
+    }))
+      .filter(e => e.sessions.length);
     console.log(this.availabityDetails);
   }
 }
