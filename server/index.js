@@ -1,10 +1,19 @@
-const express= require('express');
-const app=express();
+const express = require('express');
+const app = express();
 
-app.get('/',(req,res)=>{
-    res.send("<h1>Hello server</h1>");
-});
+var userController=require('./controller/userController');
+const cors=require('cors');
+const bodyParser=require('body-parser');
+const {mongoose}=require('./db');
+var gmailController=require('./controller/gmail');
 
-app.listen(5000,()=>{
-    console.log("server Created")
+app.use(bodyParser.json());
+app.use(cors({origin :'http://localhost:4200'}));
+app.use('/users',userController);
+
+
+gmailController.gmail();
+
+app.listen(3000, () => {
+  console.log(`Server running on port 3000!`);
 });

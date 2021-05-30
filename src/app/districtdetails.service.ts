@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { districtDetails, centerDetails, stateDetails } from './session';
+import {user}   from './users';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { Observable } from 'rxjs';
 export class DistrictdetailsService {
 
   private stateURL = 'https://cdn-api.co-vin.in/api/v2/admin/location/states';
+  private userApiURL='http://localhost:3000/users';
   constructor(private http: HttpClient) { }
   // request for state Details //
   getstateData(): Observable<stateDetails> {
@@ -23,4 +25,10 @@ export class DistrictdetailsService {
   getsessionData(districtId,currDate): Observable<centerDetails> { 
     return this.http.get<centerDetails>(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=${districtId}&date=${currDate}`);
   }
+   
+  postUserDetails(userData:user)
+  {
+    return this.http.post(this.userApiURL,userData);
+  }
+
 }

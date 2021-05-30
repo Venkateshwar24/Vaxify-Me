@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Register Now and get the slots availability alert Email at your pincode in realtime</h2>
+
+    <form [formGroup]="userform" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <div class="row">
+            <mat-form-field class="col-sm-4 col-lg-4 col-xl-4 col- m-2">
+                <mat-label>Enter your pincode</mat-label>
+                <input formControlName='pincode' matInput type="text">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="col-sm-4 col-lg-4 col-xl-4 col- m-2">
+                <mat-label>Enter your Gmailid</mat-label>
+                <input formControlName='emailid' matInput type="text">
+            </mat-form-field>
+        </div>
+        <div class="row ">
+            <div class="col-sm-4 col-lg-4 col-xl-4 col- m-2">
+                <button mat-raised-button color="primary">Register</button>
+            </div>
+        </div>
+    </form>
+
+</div>

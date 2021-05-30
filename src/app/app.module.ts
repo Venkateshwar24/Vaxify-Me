@@ -11,13 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{ReactiveFormsModule} from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { FooterComponent } from './footer/footer.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChennaidistrictComponent,
     TopViewComponent,
-    FooterComponent
+    FooterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
